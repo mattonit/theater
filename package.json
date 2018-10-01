@@ -4,7 +4,7 @@
   "main": "dist/theater.js",
   "scripts": {
     "js:build": "babel js/ --out-dir dist/js/",
-    "js:lint": "eslint --config .eslintrc.json js/*.js"
+    "js:lint": "eslint --config .eslintrc.json js/*.js --fix"
   },
   "repository": "https://github.com/mattonit/theater",
   "author": "Mattonit",
