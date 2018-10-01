@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-arrow-functions",
+    "babel-plugin-transform-es2015-constants",
+    "@babel/plugin-transform-block-scoped-functions"
+  ]
+}

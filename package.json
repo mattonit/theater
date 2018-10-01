@@ -5,5 +5,13 @@
   "repository": "https://github.com/mattonit/theater",
   "author": "Mattonit",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/plugin-transform-block-scoped-functions": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-plugin-transform-es2015-constants": "^6.1.4"
+  }
 }
