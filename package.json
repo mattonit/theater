@@ -1,0 +1,9 @@
+{
+  "name": "theater",
+  "version": "0.0.1",
+  "main": "dist/theater.js",
+  "repository": "https://github.com/mattonit/theater",
+  "author": "Mattonit",
+  "license": "MIT",
+  "private": false
+}
