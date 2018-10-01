@@ -2,6 +2,9 @@
   "name": "theater",
   "version": "0.0.1",
   "main": "dist/theater.js",
+  "scripts": {
+    "js:build": "babel js/ --out-dir dist/js/"
+  },
   "repository": "https://github.com/mattonit/theater",
   "author": "Mattonit",
   "license": "MIT",
