@@ -21,10 +21,9 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 300ms linear, opacity 300ms linear;
-  //transition: all 5s ease;
   transform: translateX(-50%);
   &.shown {
-    visibility:visible;
-    opacity:1;
+    visibility: visible;
+    opacity: 1;
   }
 }

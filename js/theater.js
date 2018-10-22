@@ -119,7 +119,6 @@
 
   $.fn.theater = function (options) {
     return this.each(function () {
-      // new Theater($(this), options);
       const theater = new Theater($(this), options);
       theater.init();
 
