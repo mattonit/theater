@@ -26,8 +26,8 @@
 
       this.$window = $('window');
       this.$body = $('body');
-      this.$overlay = $('<div id="theater-overlay"></div>');
-      this.$container = $('<div id="theater-container"></div>');
+      this.$overlay = $('<div class="theater-overlay"></div>');
+      this.$container = $('<div class="theater-container"></div>');
 
       this.src = $(this.$element[0]).attr('href');
 
@@ -36,9 +36,7 @@
         keyboard: true,
         arrows: true,
         template:
-        `<div id="theater-overlay">
-          ${this.renderMedia()}
-         </div>`,
+        `${this.renderMedia()}`,
         slideshow: true,
         closeOnClick: true,
         overlay: true
@@ -61,12 +59,17 @@
     bindEvents() {
 
       this.$element.on('click', this.show.bind(this));
-      this.$window.on('keyup', this.handleKeyboard.bind(this));
+      this.$body.on('keyup', this.handleKeyboard.bind(this));
 
     }
 
-    handleKeyboard() {
+    handleKeyboard(e) {
       if (this.options.keyboard === false) {
+        return true;
+      }
+
+      if (e.which === KEY_ESC) {
+        this.close();
         return false;
       }
 
@@ -90,10 +93,20 @@
 
       this.$container.html(this.options.template);
 
+      this.$container.addClass('shown');
+
     }
 
     close() {
-      return false;
+
+      this.$container.removeClass('shown');
+
+      this.$container.remove();
+
+      if (this.options.overlay) {
+        this.$overlay.remove();
+      }
+
     }
 
   }
