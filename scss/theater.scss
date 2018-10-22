@@ -9,5 +9,19 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(255, 255, 255, .35);
+  z-index: 9999;
+  background: rgba(0, 0, 0, .5);
+}
+
+.theater-container {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(-50%);
+  &.shown {
+    opacity: 1;
+  }
 }
