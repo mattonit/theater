@@ -16,6 +16,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   let KEY_ESC = 27;
   let KEY_LEFT = 37;
   let KEY_RIGHT = 39;
+  let DELAY_TIME = 300;
 
   let Theater =
   /*#__PURE__*/
@@ -30,7 +31,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       };
       this.$element = $(element);
       this.options = options;
-      this.$window = $('window');
       this.$body = $('body');
       this.$overlay = $('<div class="theater-overlay"></div>');
       this.$container = $('<div class="theater-container"></div>');
@@ -85,21 +85,28 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }, {
       key: "show",
       value: function show(e) {
+        var _this = this;
+
         e.preventDefault();
-
-        if (this.options.overlay) {
-          this.$body.append(this.$overlay);
-        }
-
         this.$body.append(this.$container);
         this.$container.html(this.options.template);
-        this.$container.addClass('shown');
+        setTimeout(function () {
+          if (_this.options.overlay) {
+            _this.$body.append(_this.$overlay);
+          }
+
+          _this.$container.addClass('shown');
+        }, DELAY_TIME);
       }
     }, {
       key: "close",
       value: function close() {
+        var _this2 = this;
+
         this.$container.removeClass('shown');
-        this.$container.remove();
+        setTimeout(function () {
+          _this2.$container.remove();
+        }, DELAY_TIME);
 
         if (this.options.overlay) {
           this.$overlay.remove();
@@ -112,9 +119,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   $.fn.theater = function (options) {
     return this.each(function () {
-      // new Theater($(this), options);
       let theater = new Theater($(this), options);
       theater.init();
     });
   };
 })(jQuery);
+//# sourceMappingURL=theater.js.map
