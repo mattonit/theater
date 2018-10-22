@@ -10,6 +10,7 @@
   const KEY_ESC   = 27;
   const KEY_LEFT  = 37;
   const KEY_RIGHT = 39;
+  const DELAY_TIME = 300;
 
   class Theater {
 
@@ -24,7 +25,6 @@
       this.$element = $(element);
       this.options = options;
 
-      this.$window = $('window');
       this.$body = $('body');
       this.$overlay = $('<div class="theater-overlay"></div>');
       this.$container = $('<div class="theater-container"></div>');
@@ -85,15 +85,19 @@
 
       e.preventDefault();
 
-      if (this.options.overlay) {
-        this.$body.append(this.$overlay);
-      }
-
       this.$body.append(this.$container);
 
       this.$container.html(this.options.template);
 
-      this.$container.addClass('shown');
+      setTimeout(() => {
+
+        if (this.options.overlay) {
+          this.$body.append(this.$overlay);
+        }
+
+        this.$container.addClass('shown');
+
+      }, DELAY_TIME);
 
     }
 
@@ -101,7 +105,9 @@
 
       this.$container.removeClass('shown');
 
-      this.$container.remove();
+      setTimeout(() => {
+        this.$container.remove();
+      }, DELAY_TIME);
 
       if (this.options.overlay) {
         this.$overlay.remove();
