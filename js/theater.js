@@ -22,6 +22,7 @@
       };
 
       this.$element = $(element);
+      this.options = options;
 
       this.$window = $('window');
       this.$body = $('body');
@@ -36,15 +37,18 @@
         arrows: true,
         template:
         `<div id="theater-overlay">
-          ${ this.renderMedia() }
+          ${this.renderMedia()}
          </div>`,
         slideshow: true,
         closeOnClick: true,
         overlay: true
       };
 
-      this.options = this.assignOptions(options);
+    }
 
+    init() {
+
+      this.options = this.assignOptions(this.options);
       this.bindEvents();
 
     }
@@ -62,13 +66,15 @@
     }
 
     handleKeyboard() {
-      if(this.options.keyboard === false) {
+      if (this.options.keyboard === false) {
         return false;
       }
+
+      return true;
     }
 
     renderMedia() {
-      return `<img src="${ this.src }" class="img-fluid" />`;
+      return `<img src="${this.src}" class="img-fluid" />`;
 
     }
 
@@ -76,7 +82,7 @@
 
       e.preventDefault();
 
-      if(this.options.overlay) {
+      if (this.options.overlay) {
         this.$body.append(this.$overlay);
       }
 
@@ -87,13 +93,17 @@
     }
 
     close() {
+      return false;
     }
 
   }
 
   $.fn.theater = function (options) {
     return this.each(function () {
-      new Theater($(this), options);
+      // new Theater($(this), options);
+      const theater = new Theater($(this), options);
+      theater.init();
+
     });
 
   };
