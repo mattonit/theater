@@ -4,7 +4,7 @@
   "main": "dist/theater.js",
   "scripts": {
     "css:compile": "node-sass --output-style expanded --source-maps true --source-map-contents --true --precision 6 scss/*.scss -o dist/css/",
-    "css:minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/theater.min.css dist/css/theater.css",
+    "css:minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/theater.min.css dist/css/theter.css",
     "css:lint": "stylelint --config .stylelintrc.json --syntax scss \"scss/*.scss\"",
     "css:watch": "node-sass --output-style expanded --source-maps true --source-map-contents --true --precision 6 -w scss/*.scss -o dist/css/",
     "js:build": "babel js/ --out-dir dist/js/  --source-maps",
@@ -21,6 +21,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-transform-arrow-functions": "^7.0.0",
     "@babel/plugin-transform-block-scoped-functions": "^7.0.0",
+    "@babel/plugin-transform-block-scoping": "^7.0.0",
     "@babel/plugin-transform-classes": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-es2015": "^7.0.0-beta.53",

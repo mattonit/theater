@@ -13,12 +13,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
  * Licensed under MIT License
  */
 (function ($) {
-  let KEY_ESC = 27;
-  let KEY_LEFT = 37;
-  let KEY_RIGHT = 39;
-  let DELAY_TIME = 300;
+  var KEY_ESC = 27;
+  var KEY_LEFT = 37;
+  var KEY_RIGHT = 39;
+  var DELAY_TIME = 300;
 
-  let Theater =
+  var Theater =
   /*#__PURE__*/
   function () {
     function Theater(element, options) {
@@ -119,7 +119,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   $.fn.theater = function (options) {
     return this.each(function () {
-      let theater = new Theater($(this), options);
+      var theater = new Theater($(this), options);
       theater.init();
     });
   };

@@ -13,7 +13,8 @@
     "@babel/plugin-transform-arrow-functions",
     "babel-plugin-transform-es2015-constants",
     "@babel/plugin-transform-block-scoped-functions",
+    "@babel/plugin-transform-block-scoping",
     "@babel/plugin-transform-classes",
-    "@babel/plugin-proposal-object-rest-spread"
+    "@babel/plugin-proposal-object-rest-spread",
   ]
 }
