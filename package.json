@@ -4,6 +4,7 @@
   "main": "dist/theater.js",
   "scripts": {
     "css:compile": "node-sass --output-style expanded --source-maps true --source-map-contents --true --precision 6 scss/*.scss -o dist/css/",
+    "css:lint": "stylelint --config .stylelintrc.json --syntax scss \"scss/*.scss\"",
     "css:watch": "node-sass --output-style expanded --source-maps true --source-map-contents --true --precision 6 -w scss/*.scss -o dist/css/",
     "js:build": "babel js/ --out-dir dist/js/",
     "js:lint": "eslint --config .eslintrc.json js/*.js --fix"
