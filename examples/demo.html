@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Theater.js</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <!-- Theater CSS-->
+  <link rel="stylesheet" href="../dist/css/theater.css">
+
+</head>
+<body>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <a href="https://via.placeholder.com/720x450/f57c00/ffffff?text=Some+text!" data-theater>
+          <img src="https://via.placeholder.com/300x188/f57c00/ffffff?text=Some+text!" class="card-img-top img-fluid">
+        </a>
+        <div class="card-body">Example image</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <a href="https://via.placeholder.com/720x450/f85032/ffffff?text=Some+text!" data-theater>
+          <img src="https://via.placeholder.com/300x188/f85032/ffffff?text=Some+text!" class="card-img-top img-fluid">
+        </a>
+        <div class="card-body">Example image</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <a href="https://via.placeholder.com/720x450/4caf50/ffffff?text=Some+text!" data-theater>
+          <img src="https://via.placeholder.com/300x188/4caf50/ffffff?text=Some+text!" class="card-img-top img-fluid">
+        </a>
+        <div class="card-body">Example image</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <a href="https://via.placeholder.com/720x450/4a2dbe/ffffff?text=Some+text!" data-theater>
+          <img src="https://via.placeholder.com/300x188/4a2dbe/ffffff?text=Some+text!" class="card-img-top img-fluid">
+        </a>
+        <div class="card-body">Example image</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../dist/js/theater.js"></script>
+
+<script>
+  $('[data-theater]').theater({
+  });
+</script>
+
+</body>
+</html>
