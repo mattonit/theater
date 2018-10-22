@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "main": "dist/theater.js",
   "scripts": {
+    "css:compile": "node-sass --output-style expanded --source-maps true --source-map-contents --true --precision 6 scss/*.scss -o dist/css/",
+    "css:watch": "node-sass --output-style expanded --source-maps true --source-map-contents --true --precision 6 -w scss/*.scss -o dist/css/",
     "js:build": "babel js/ --out-dir dist/js/",
     "js:lint": "eslint --config .eslintrc.json js/*.js --fix"
   },
@@ -22,6 +24,13 @@
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-es2015-constants": "^6.1.4",
     "eslint": "^5.6.1",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "gulp": "^3.9.1",
+    "node-sass": "^4.9.4",
+    "stylelint": "^9.4.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.7.0",
+    "stylelint-scss": "^2.1.0"
   }
 }
