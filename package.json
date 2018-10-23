@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "main": "dist/theater.js",
   "scripts": {
-    "css:compile": "node-sass --output-style expanded --source-maps true --source-map-contents --true --precision 6 scss/*.scss -o dist/css/",
+    "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents --true --precision 6 scss/*.scss -o dist/css/",
     "css:minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/theater.min.css dist/css/theter.css",
     "css:lint": "stylelint --config .stylelintrc.json --syntax scss \"scss/*.scss\"",
-    "css:watch": "node-sass --output-style expanded --source-maps true --source-map-contents --true --precision 6 -w scss/*.scss -o dist/css/",
+    "css:watch": "node-sass --output-style expanded --source-map true --source-map-contents --true --precision 6 -w scss/*.scss -o dist/css/",
     "js:build": "babel js/ --out-dir dist/js/  --source-maps",
     "js:minify": "uglifyjs --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/theater.js.map,includeSources,url=theater.min.js.map\" --output dist/js/theater.min.js dist/js/theater.js",
     "js:lint": "eslint --config .eslintrc.json js/*.js"

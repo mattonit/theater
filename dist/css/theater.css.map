@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "theater.css",
+	"sources": [
+		"../../scss/theater.scss"
+	],
+	"sourcesContent": [
+		"/*\n * Theater JS\n * Mattonit (C) 2018\n */\n\n.theater-overlay {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 9998;\n  background: rgba(0, 0, 0, .5);\n}\n\n.theater-container {\n  position: fixed;\n  top: 40px;\n  left: 50%;\n  z-index: 9999;\n  visibility: hidden;\n  opacity: 0;\n  transition: visibility 300ms linear, opacity 300ms linear;\n  transform: translateX(-50%);\n  &.shown {\n    visibility: visible;\n    opacity: 1;\n  }\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA;;;GAGG;AAEH,AAAA,gBAAgB,CAAC;EACf,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,CAAC;EACN,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,CAAC;EACT,IAAI,EAAE,CAAC;EACP,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,kBAAiB;CAC9B;;AAED,AAAA,kBAAkB,CAAC;EACjB,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,IAAI;EACT,IAAI,EAAE,GAAG;EACT,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,6CAA6C;EACzD,SAAS,EAAE,gBAAgB;CAK5B;;AAbD,AASE,kBATgB,AASf,MAAM,CAAC;EACN,UAAU,EAAE,OAAO;EACnB,OAAO,EAAE,CAAC;CACX"
+}
