@@ -37,6 +37,6 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^0.7.0",
     "stylelint-scss": "^2.1.0",
-    "uglify-js": "^3.4.9"
+    "uglify-es": "^3.3.9"
   }
 }
