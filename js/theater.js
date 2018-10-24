@@ -61,6 +61,11 @@
       this.$element.on('click', this.show.bind(this));
       this.$body.on('keyup', this.handleKeyboard.bind(this));
 
+      if(this.options.closeOnClick) {
+        this.$overlay.on('click', this.close.bind(this));
+      }
+
+
     }
 
     handleKeyboard(e) {
@@ -101,7 +106,9 @@
 
     }
 
-    close() {
+    close(e) {
+
+      console.log(this.$container);
 
       this.$container.removeClass('shown');
 

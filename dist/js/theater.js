@@ -39,7 +39,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         loop: false,
         keyboard: true,
         arrows: true,
-        template: `${this.renderMedia()}`,
+        template: "".concat(this.renderMedia()),
         slideshow: true,
         closeOnClick: true,
         overlay: true
@@ -62,6 +62,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       value: function bindEvents() {
         this.$element.on('click', this.show.bind(this));
         this.$body.on('keyup', this.handleKeyboard.bind(this));
+
+        if (this.options.closeOnClick) {
+          this.$overlay.on('click', this.close.bind(this));
+        }
       }
     }, {
       key: "handleKeyboard",
@@ -80,7 +84,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }, {
       key: "renderMedia",
       value: function renderMedia() {
-        return `<img src="${this.src}" class="img-fluid" />`;
+        return "<img src=\"".concat(this.src, "\" class=\"img-fluid\" />");
       }
     }, {
       key: "show",
@@ -100,9 +104,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
     }, {
       key: "close",
-      value: function close() {
+      value: function close(e) {
         var _this2 = this;
 
+        console.log(this.$container);
         this.$container.removeClass('shown');
         setTimeout(function () {
           _this2.$container.remove();
